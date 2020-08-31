@@ -9,7 +9,7 @@ const pool = new Pool({
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Lab 2 TING' });
 });
 
 router.get('/db', async (req, res) => {
@@ -17,7 +17,7 @@ router.get('/db', async (req, res) => {
       const client = await pool.connect()
       const result = await client.query('SELECT * FROM test_table');
       const results = { 'results': (result) ? result.rows : null};
-      res.render('pages/db', results );
+      res.render('db', results );
       client.release();
     } catch (err) {
       console.error(err);
