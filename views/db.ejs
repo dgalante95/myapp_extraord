@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: times, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 4px;
+}
+
+tr:nth-child(even) {
+  background-color: #f1f1c1;
+}
+</style>
+</head>
+<body>
+  
+
+<div class="container">
+<h2>Database Results</h2>
+
+<table>
+   <tr>
+    <th>ID</th>
+    <th>Element</th>
+  </tr>
+  
+  <% results.forEach(function(r) { %>
+  
+  <tr>
+    <td> <%= r.id %>   </td>
+    <td> <%= r.name%>  </td>
+  </tr>
+
+  <% }); %>
+</table>
+</div>
+
+</body>
+</html>
+  
+  
